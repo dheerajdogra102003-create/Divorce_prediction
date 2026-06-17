@@ -1,0 +1,1084 @@
+
+
+
+
+
+/* ==============================
+      FLOATING HEARTS
+============================== */
+
+.heart-container{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:999;
+}
+
+.floating-heart{
+
+    position:absolute;
+
+    bottom:-80px;
+
+    animation-name:floatHeart;
+
+    animation-timing-function:linear;
+
+    animation-iteration-count:infinite;
+
+    filter:
+    drop-shadow(0 0 8px #ff5ea8)
+    drop-shadow(0 0 18px #ff80bf);
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:
+translateY(0)
+rotate(0deg)
+scale(.8);
+
+opacity:0;
+
+}
+
+15%{
+
+opacity:.18;
+
+}
+
+50%{
+
+transform:
+translateY(-50vh)
+rotate(180deg)
+scale(1.15);
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(360deg)
+scale(.9);
+
+opacity:0;
+
+}
+}
+/* ============================================================
+   HARMONY AI - PREMIUM UI (PART 1)
+   ============================================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* -------------------------------------------------
+   ROOT COLORS
+-------------------------------------------------- */
+
+:root {
+  --primary: #7c3aed;
+  --secondary: #a855f7;
+  --pink: #ec4899;
+  --cyan: #06b6d4;
+  --success: #10b981;
+  --danger: #ef4444;
+
+  --glass: rgba(255, 255, 255, 0.18);
+  --glass2: rgba(255, 255, 255, 0.08);
+}
+
+/* -------------------------------------------------
+   GLOBAL
+-------------------------------------------------- */
+
+html,
+body,
+[class*="css"] {
+  font-family: "Poppins", sans-serif;
+
+  scroll-behavior: smooth;
+}
+
+/* -------------------------------------------------
+   BACKGROUND
+-------------------------------------------------- */
+
+.stApp {
+  background: linear-gradient(135deg, #eef2ff, #f8fafc, #fdf2f8, #eef2ff);
+
+  background-size: 300% 300%;
+
+  animation: bgMove 18s ease infinite;
+
+  overflow-x: hidden;
+}
+
+/* Animated Background */
+
+@keyframes bgMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* -------------------------------------------------
+   HERO
+-------------------------------------------------- */
+
+.hero-title {
+  font-size: 58px;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  background: linear-gradient(90deg, #6d28d9, #ec4899, #06b6d4, #6d28d9);
+
+  background-size: 300%;
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: gradientText 8s linear infinite;
+
+  margin-top: 20px;
+
+  margin-bottom: 10px;
+}
+
+.hero-desc {
+  text-align: center;
+
+  font-size: 19px;
+
+  color: #555;
+
+  max-width: 900px;
+
+  margin: auto;
+
+  line-height: 1.9;
+
+  margin-bottom: 35px;
+
+  animation: fadeUp 0.8s;
+}
+
+.gold-text {
+  color: #f59e0b;
+
+  font-weight: 700;
+}
+
+.pink-text {
+  color: #ec4899;
+
+  font-weight: 700;
+}
+
+/* -------------------------------------------------
+   GRADIENT TEXT
+-------------------------------------------------- */
+
+@keyframes gradientText {
+  0% {
+    background-position: 0%;
+  }
+
+  100% {
+    background-position: 300%;
+  }
+}
+
+/* -------------------------------------------------
+   GLASS CARD
+-------------------------------------------------- */
+
+.metric-card {
+  width: 210px;
+
+  padding: 14px 18px;
+
+  border-radius: 16px;
+
+  margin: 12px auto;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.08),
+    inset 0 1px rgba(255, 255, 255, 0.45);
+
+  transition: 0.4s;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+/* Hover */
+
+.metric-card:hover {
+  transform: translateY(-10px) scale(1.02);
+
+  box-shadow: 0 25px 50px rgba(124, 58, 237, 0.25);
+}
+
+/* -------------------------------------------------
+   SHIMMER
+-------------------------------------------------- */
+
+.metric-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -150%;
+
+  left: -60%;
+
+  width: 60%;
+
+  height: 350%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+
+  transform: rotate(25deg);
+
+  animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    left: 180%;
+  }
+}
+
+/* -------------------------------------------------
+   CARD TITLE
+-------------------------------------------------- */
+
+.metric-card h2 {
+  font-weight: 600;
+
+  color: #666;
+
+  font-size: 18px;
+
+  margin-bottom: 8px;
+}
+
+.metric-card h1 {
+  font-weight: 700;
+
+  color: #6d28d9;
+
+  font-size: 18px;
+
+  margin: 0;
+}
+
+/* -------------------------------------------------
+   RESULT CARD
+-------------------------------------------------- */
+
+.result-card {
+  padding: 28px;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+
+  transition: 0.4s;
+}
+
+.result-card:hover {
+  transform: translateY(-8px);
+}
+
+.success-card {
+  background: linear-gradient(135deg, #d1fae5, #ecfdf5);
+
+  border-left: 8px solid #10b981;
+}
+
+.danger-card {
+  background: linear-gradient(135deg, #fee2e2, #fff5f5);
+
+  border-left: 8px solid #ef4444;
+}
+
+/* -------------------------------------------------
+   BUTTON
+-------------------------------------------------- */
+
+.stButton > button {
+  height: 58px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: white;
+
+  background: linear-gradient(90deg, #7c3aed, #ec4899);
+
+  background-size: 300%;
+
+  transition: 0.4s;
+
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
+}
+
+.stButton > button:hover {
+  transform: translateY(-4px);
+
+  background-position: right;
+
+  box-shadow: 0 15px 40px rgba(236, 72, 153, 0.4);
+}
+
+/* -------------------------------------------------
+   GLOW
+-------------------------------------------------- */
+
+.glow-card {
+  animation: glow 2.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.15);
+  }
+
+  to {
+    box-shadow: 0 0 40px rgba(236, 72, 153, 0.35);
+  }
+}
+
+/* -------------------------------------------------
+   FADE
+-------------------------------------------------- */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.metric-card,
+.result-card {
+  animation: fadeUp 0.8s;
+}
+
+/* -------------------------------------------------
+   DIVIDER
+-------------------------------------------------- */
+
+hr {
+  margin-top: 40px;
+
+  margin-bottom: 40px;
+
+  border: none;
+
+  height: 2px;
+
+  background: linear-gradient(90deg, transparent, #a855f7, transparent);
+}
+
+/* -------------------------------------------------
+   SLIDERS
+-------------------------------------------------- */
+
+.stSlider {
+  padding-top: 10px;
+
+  padding-bottom: 10px;
+}
+
+/* -------------------------------------------------
+   SCROLLBAR
+-------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899;
+}
+
+/* ============================================================
+   HARMONY AI - PREMIUM UI (PART 2)
+   ============================================================ */
+
+/* -------------------------------------------------
+   REVIEW CARD
+-------------------------------------------------- */
+
+.review-card {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 35px;
+
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
+
+  line-height: 1.9;
+
+  font-size: 17px;
+
+  animation: fadeUp 0.8s;
+
+  margin-top: 20px;
+
+  margin-bottom: 30px;
+}
+
+.review-card::after {
+  content: "✨";
+
+  position: absolute;
+
+  right: 25px;
+
+  top: 20px;
+
+  font-size: 26px;
+
+  animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.3;
+
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.3);
+  }
+
+  100% {
+    opacity: 0.3;
+
+    transform: scale(0.8);
+  }
+}
+
+/* -------------------------------------------------
+   SECTION TITLES
+-------------------------------------------------- */
+
+.section-title {
+  font-size: 32px;
+
+  font-weight: 700;
+
+  margin-bottom: 25px;
+
+  background: linear-gradient(90deg, #7c3aed, #ec4899);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------------------------
+   PROGRESS BAR
+-------------------------------------------------- */
+
+.stProgress {
+  width: 65%;
+
+  margin: auto;
+
+  margin-top: 10px;
+
+  margin-bottom: 28px;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.stProgress > div {
+  border-radius: 20px;
+}
+
+/* -------------------------------------------------
+   DATAFRAME
+-------------------------------------------------- */
+
+[data-testid="stDataFrame"] {
+  background: rgba(255, 255, 255, 0.22);
+
+  backdrop-filter: blur(15px);
+
+  border-radius: 20px;
+
+  padding: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* -------------------------------------------------
+   EXPANDER
+-------------------------------------------------- */
+
+.streamlit-expanderHeader {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #6d28d9;
+}
+
+/* -------------------------------------------------
+   DOWNLOAD BUTTON
+-------------------------------------------------- */
+
+.stDownloadButton > button {
+  width: 100%;
+
+  height: 55px;
+
+  border-radius: 15px;
+
+  border: none;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: white;
+
+  background: linear-gradient(90deg, #06b6d4, #7c3aed);
+
+  transition: 0.35s;
+}
+
+.stDownloadButton > button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.35);
+}
+
+/* -------------------------------------------------
+   STATUS BADGES
+-------------------------------------------------- */
+
+.badge {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border-radius: 40px;
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+  margin-top: 10px;
+}
+
+.badge-success {
+  background: #dcfce7;
+
+  color: #15803d;
+}
+
+.badge-warning {
+  background: #fef3c7;
+
+  color: #b45309;
+}
+
+.badge-danger {
+  background: #fee2e2;
+
+  color: #b91c1c;
+}
+
+/* -------------------------------------------------
+   METRIC VALUE GLOW
+-------------------------------------------------- */
+
+.metric-card h1 {
+  text-shadow: 0 0 15px rgba(124, 58, 237, 0.18);
+}
+
+/* -------------------------------------------------
+   FLOATING HEARTS
+-------------------------------------------------- */
+
+.stApp::before {
+  content: "❤️";
+
+  position: fixed;
+
+  left: 5%;
+
+  bottom: -50px;
+
+  font-size: 30px;
+
+  opacity: 0.12;
+
+  animation: floatHeart 12s linear infinite;
+
+  pointer-events: none;
+}
+
+.stApp::after {
+  content: "💜";
+
+  position: fixed;
+
+  right: 8%;
+
+  bottom: -80px;
+
+  font-size: 35px;
+
+  opacity: 0.12;
+
+  animation: floatHeart2 15s linear infinite;
+
+  pointer-events: none;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) rotate(0deg);
+
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.15;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+
+    opacity: 0;
+  }
+}
+
+@keyframes floatHeart2 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.18;
+  }
+
+  100% {
+    transform: translateY(-120vh) rotate(-360deg);
+
+    opacity: 0;
+  }
+}
+
+/* -------------------------------------------------
+   SPARKLE EFFECT
+-------------------------------------------------- */
+
+.metric-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 10px;
+
+  width: 8px;
+
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  box-shadow:
+    0 0 8px white,
+    0 0 15px white;
+
+  animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+
+    transform: scale(0.2);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform: scale(0.2);
+  }
+}
+
+/* -------------------------------------------------
+   INPUT BOXES
+-------------------------------------------------- */
+
+.stNumberInput,
+.stTextInput,
+.stSelectbox {
+  animation: fadeUp 0.8s;
+}
+
+/* -------------------------------------------------
+   SIDEBAR
+-------------------------------------------------- */
+
+section[data-testid="stSidebar"] {
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(18px);
+}
+
+/* -------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+  visibility: hidden;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+
+    padding: 0 15px;
+  }
+
+  .metric-card {
+    padding: 22px;
+  }
+
+  .metric-card h1 {
+    font-size: 34px;
+  }
+
+  .review-card {
+    padding: 22px;
+
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .stProgress {
+    width: 95%;
+  }
+}
+
+/* -------------------------------------------------
+   FINAL PREMIUM GLOW
+-------------------------------------------------- */
+
+.metric-card,
+.review-card,
+.result-card {
+  transition: all 0.4s ease;
+}
+
+.metric-card:hover,
+.review-card:hover,
+.result-card:hover {
+  box-shadow:
+    0 25px 60px rgba(124, 58, 237, 0.22),
+    0 0 35px rgba(236, 72, 153, 0.12);
+}
+
+/* Align metric values */
+[data-testid="metric-container"] {
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px;
+}
+
+[data-testid="stMetricLabel"] {
+  justify-content: center;
+  text-align: center;
+}
+
+[data-testid="stMetricValue"] {
+  justify-content: center;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+/* Prediction Cards */
+
+/* ------------------------------
+   Divorce Prediction
+--------------------------------*/
+
+.prediction-box {
+  width: 70%;
+
+  margin: 30px auto;
+
+  padding: 35px;
+
+  text-align: center;
+
+  background: white;
+
+  border-radius: 25px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+
+  animation: fadeUp 0.8s;
+}
+
+.prediction-box h3 {
+  font-size: 28px;
+
+  margin-bottom: 20px;
+}
+
+.prediction-value {
+  font-size: 72px;
+
+  font-weight: 800;
+
+  animation: pulse 1.5s infinite;
+}
+
+.prediction-status {
+  font-size: 22px;
+
+  font-weight: 600;
+
+  margin-top: 10px;
+
+  margin-bottom: 25px;
+}
+
+.prediction-bar {
+  width: 100%;
+
+  height: 22px;
+
+  background: #ececec;
+
+  border-radius: 50px;
+
+  overflow: hidden;
+}
+
+.prediction-fill {
+  height: 100%;
+
+  border-radius: 50px;
+
+  transition: width 1.5s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.prediction-card {
+  /* padding:25px;
+
+background:white;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+text-align:center;
+
+margin-top:20px;  */
+
+  width: 420px;
+  min-height: 230px;
+
+  margin: 20px auto;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+}
+
+.prediction-card h3 {
+  font-size: 24px;
+
+  margin-bottom: 18px;
+}
+
+.prediction-card h1 {
+  font-size: 46px;
+
+  margin: 10px 0 20px;
+
+  color: #222;
+}
+
+/* Progress */
+
+.progress-bg {
+  /* width:100%;
+
+height:18px;
+
+background:#E5E7EB;
+
+border-radius:50px;
+
+overflow:hidden;
+
+margin:18px 0; */
+
+  width: 90%;
+
+  height: 14px;
+
+  margin: auto;
+
+  border-radius: 50px;
+
+  background: #ececec;
+
+  overflow: hidden;
+}
+
+.progress-fill {
+  /* height:100%;
+
+border-radius:50px;
+
+transition:width 1s ease; */
+
+  height: 100%;
+
+  border-radius: 50px;
+
+  transition: width 0.8s ease;
+}
+
+.prediction-card p {
+  font-size: 18px;
+
+  font-weight: 600;
+}
