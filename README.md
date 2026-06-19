@@ -2,9 +2,10 @@
 <p align="center">
 An AI-powered Machine Learning application that predicts the probability of divorce using relationship, psychological, social, and demographic factors.
 
-<img width="1920" height="1200" alt="Screenshot 2026-06-19 214330" src="https://github.com/user-attachments/assets/8a856799-3b63-41a4-aec3-fc77b619a9a1" />
-<img width="1920" height="1200" alt="Screenshot 2026-06-19 214310" src="https://github.com/user-attachments/assets/c0a2c7ed-3c1a-40dd-9ada-b1d47cad7d37" />
 <img width="1920" height="1200" alt="Screenshot 2026-06-19 214233" src="https://github.com/user-attachments/assets/4dad7a1d-8e11-4962-a284-28a51a739398" />
+<img width="1920" height="1200" alt="Screenshot 2026-06-19 214310" src="https://github.com/user-attachments/assets/c0a2c7ed-3c1a-40dd-9ada-b1d47cad7d37" />
+<img width="1920" height="1200" alt="Screenshot 2026-06-19 214330" src="https://github.com/user-attachments/assets/8a856799-3b63-41a4-aec3-fc77b619a9a1" />
+
 
 </p>
 
